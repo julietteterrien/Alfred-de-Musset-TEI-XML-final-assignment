@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?xml-model href="tei_assignment.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="tei_assignment.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Encoding of the sample 1</title>
+            <author>Juliette Terrien</author>
+         </titleStmt>
+         <publicationStmt>
+            <date when="2024-12-29">29 december 2024</date>
+            <availability>
+               <licence type="url" target="http://creativecommons.org/licenses/by-sa/3.0/">
+                  Distributed under a Creative Commons Attribution-ShareAlike 3.0 Unported
+                  License</licence>
+            </availability>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl>
+               <monogr>
+                  <author>Musset, Alfred de</author>
+                  <title>Oeuvres de Alfred de Musset.... Comédies et proverbes : La nuit vénitienne
+                     ; André del Sarto ; Les caprices de Marianne ; Fantasio ; On ne badine pas avec
+                     l'amour ; Barberine</title>
+                  <imprint>
+                     <publisher>A. Lemerre</publisher>
+                     <pubPlace>Paris</pubPlace>
+                     <date from="1884" to="1895">1884-1895</date>
+                  </imprint>
+               </monogr>
+               <relatedItem>
+                  <p>This encoding project is based on the digitization of the original document</p>
+                  <date when="2017-03-27">27/03/2017</date>
+                  <publisher>Bibliothèque nationale de France</publisher>
+                  <idno>Bibliothèque nationale de France, département Littérature et art, 4-Z-303
+                     (3)</idno>
+                  <ref type="url" target="https://gallica.bnf.fr/ark:/12148/bpt6k97703348">Accès au
+                     document numérisé sur Gallica></ref>
+                  <availability>
+                     <licence type="url"
+                        target="https://gallica.bnf.fr/edit/und/conditions-dutilisation-des-contenus-de-gallica"
+                        >public domain</licence>
+                  </availability>
+               </relatedItem>
+            </bibl>
+         </sourceDesc>
+      </fileDesc>
+   </teiHeader>
+   <text xml:lang="fr">
+      <front>
+         <head>Personnages</head>
+         <castList>
+            <castItem type="role">
+               <role xml:id="Prince">Le Prince d'Eysenach</role>
+            </castItem>
+            <castItem type="role">
+               <role xml:id="Marquis">Le Marquis Della Ronda</role>
+            </castItem>
+            <castItem type="role">
+               <role xml:id="Razetta">Razetta</role>
+            </castItem>
+            <castItem type="role">
+               <role xml:id="Grimm">Le Secrétaire intime Grimm</role>
+            </castItem>
+            <castItem type="role">
+               <role xml:id="Laurette">Laurette</role>
+            </castItem>
+            <castItem type="role">
+               <role xml:id="Vénitiens">Deux jeunes vénitiens</role>
+            </castItem>
+            <castItem type="role">
+               <role xml:id="Femmes">Deux jeunes femmes</role>
+            </castItem>
+            <castItem type="role">
+               <role xml:id="Balbi">Madame Balbi</role>
+               <roleDesc>suivante de Laurette, personnage muet.</roleDesc>
+            </castItem>
+         </castList>
+      </front>
+      <body>
+         <div type="scene" n="3">
+            <head>SCÈNE III.</head>
+            <stage type="setting">La même décoration qu'à la première scène. — On entend l'heure
+               sonner dans l'éloignement.</stage>
+            <sp who="Razetta">
+               <speaker rend="uppercase">RAZETTA.</speaker>
+               <p>Je ne puis me défendre d'une certaine crainte. Serait-il possible que Laurette
+                  m'eût manqué de parole ! Malheur à elle, s'il était vrai ! Non pas que je doive
+                  porter la main sur elle... mais mon rival!... Il me semble que deux horloges ont
+                  déjà sonné onze heures... Est-ce le temps d'agir? Il faut que j'entre dans ces
+                  jardins. — J'aperçois une grille fermée. — O rage! me serait-il impossible de
+                  pénétrer? Au risque de ma vie, je suis déterminé à ne pas abandonner mon dessein.
+                  L'heure est passée... Rien ne doit me retenir... Mais par où entrer —
+                  Appellerai-je ? Tenterai-je de gravir cette muraille élevée? — Suis-je trahi?
+                  réellement trahi? Laurette... Si j'apercevais un valet, peut-être avec de l'or...
+                  — Je ne vois aucune lumière... Le repos semble régner dans cette maison. —
+                  Désespoir! Ne pourrai-je même jouer ma vie? ne pourrai- je tenter même le plus
+                  désespéré de tous les partis?</p>
+            </sp>
+            <stage rend="italic" type="setting">On entend une symphonie; une gondole chargée de
+               musiciens passe.</stage>
+            <sp who="Femmes">
+               <speaker rend="uppercase">UNE VOIX DE FEMME.</speaker>
+               <p>Voilà encore Razetta.</p>
+            </sp>
+            <sp who="Femmes">
+               <speaker rend="uppercase">UNE AUTRE.</speaker>
+               <p>Je l'avais parié!</p>
+            </sp>
+            <sp who="Vénitiens">
+               <speaker rend="uppercase">UN JEUNE HOMME.</speaker>
+               <p>Eh bien ! la noce était-elle jolie? As-tu fait valser la mariée? Quand ta garde
+                  sera-t-elle relevée ? Tu mets sûrement le mot d'ordre en musique ?</p>
+            </sp>
+            <sp who="Razetta">
+               <speaker rend="uppercase">RAZETTA.</speaker>
+               <p>Allez-vous-en à vos plaisirs, et laissez-moi.</p>
+            </sp>
+            <sp who="Femmes">
+               <speaker rend="uppercase">UNE VOIX DE FEMME.</speaker>
+               <p>Non ! cette fois j'ai gagé que je t'emmènerais ; allons, viens, mauvaise tête, et
+                  ne trouble le plaisir de personne ! Chacun son tour : c'était hier le tien,
+                  aujourd’hui tu es passé de mode; celui qui ne sait pas se conformer à son sort est
+                  aussi fou qu'un vieillard qui fait le jeune homme.</p>
+            </sp>
+            <sp who="Femmes">
+               <speaker rend="uppercase">UNE AUTRE.</speaker>
+               <p>Venez, Razetta ! nous sommes vos véritables amis, et nous ne désespérons pas de
+                  vous faire oublier la belle Laurette. Nous n'aurons pour cela qu'à vous rappeler
+                  ce que vous disiez vous-même il y a quelques jours, ce que vous nous avez appris.
+                  — Ne perdez pas ce nom glorieux que vous portiez, du premier mauvais sujet de la
+                  ville.</p>
+            </sp>
+            <sp who="Vénitiens">
+               <speaker rend="uppercase">LE JEUNE HOMME.</speaker>
+               <p>De l'Italie ! Viens, nous allons souper chez Camilla : tu y retrouveras ta
+                  jeunesse tout entière, tes anciens amis, tes anciens défauts, ta gaieté. — Veux-tu
+                  tuer ton rival, ou te noyer? Laisse ces idées communes au vulgaire des amants;
+                  souviens-toi de toi-même, et ne donne pas le mauvais exemple. Demain matin les
+                  femmes seront inabordables, si on apprend cette nuit que Razetta s'est noyé.
+                  Encore une fois, viens souper avec nous !</p>
+            </sp>
+            <sp who="Razetta">
+               <speaker rend="uppercase">RAZETTA.</speaker>
+               <p>C'est dit. Puissent toutes les folies des amants finir aussi joyeusement que la
+                  mienne!</p>
+            </sp>
+            <stage rend="italic" type="mixed">Il monte dans la barque, qui disparaît au bruit des
+               instruments.</stage>
+         </div>
+      </body>
+   </text>
+</TEI>

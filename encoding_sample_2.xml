@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?xml-model href="tei_assignment.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="tei_assignment.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Encoding of the sample 2</title>
+            <author>Juliette Terrien</author>
+         </titleStmt>
+         <publicationStmt>
+            <date when="2024-12-29">29 december 2024</date>
+            <availability>
+               <licence type="url" target="http://creativecommons.org/licenses/by-sa/3.0/">
+                  Distributed under a Creative Commons Attribution-ShareAlike 3.0 Unported
+                  License</licence>
+            </availability>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl>
+               <monogr>
+                  <author>Musset, Alfred de</author>
+                  <title>La nuit vénitienne ; Fantasio ; Les caprices de Marianne / Alfred de Musset
+                     ; illustrations de U. Brunelleschi</title>
+                  <imprint>
+                     <publisher>H. Piazza</publisher>
+                     <pubPlace>Paris</pubPlace>
+                     <date when="1913">1913</date>
+                  </imprint>
+               </monogr>
+               <relatedItem>
+                  <p>This encoding project is based on the digitization of the original document</p>
+                  <date when="2019-02-10">10/02/2019</date>
+                  <publisher>Bibliothèque nationale de France</publisher>
+                  <idno>Bibliothèque nationale de France, département Réserve des livres rares, RES
+                     M-YF-33</idno>
+                  <ref type="url" target="https://gallica.bnf.fr/ark:/12148/bpt6k15219114">Accès au
+                     document numérisé sur Gallica></ref>
+                  <availability>
+                     <licence type="url"
+                        target="https://gallica.bnf.fr/edit/und/conditions-dutilisation-des-contenus-de-gallica"
+                        >public domain</licence>
+                  </availability>
+               </relatedItem>
+            </bibl>
+         </sourceDesc>
+      </fileDesc>
+   </teiHeader>
+   <text xml:lang="fr">
+      <front>
+         <head>Personnages</head>
+         <castList>
+            <castItem type="role">
+               <role xml:id="Claudio">Claudio</role>
+               <roleDesc>podestat</roleDesc>
+            </castItem>
+            <castItem type="role">
+               <role xml:id="Octave">Octave</role>
+            </castItem>
+            <castItem type="role">
+               <role xml:id="Célio">Célio</role>
+            </castItem>
+            <castItem type="role">
+               <role xml:id="Tibia">Tibia</role>
+               <roleDesc>valet de Claudio</roleDesc>
+            </castItem>
+            <castItem type="role">
+               <role xml:id="Pippo">Pippo</role>
+               <roleDesc>valet de Célio</roleDesc>
+            </castItem>
+            <castItem type="role">
+               <role xml:id="Malvolio">Malvolio</role>
+               <roleDesc>intendant d'Hermia</roleDesc>
+            </castItem>
+            <castItem type="role">
+               <role xml:id="Garçon">Un garçon d'auberge</role>
+            </castItem>
+            <castItem type="role">
+               <role xml:id="Dom_01">Domestique de Marianne</role>
+            </castItem>
+            <castItem type="role">
+               <role xml:id="Dom_02">Domestiques d'Hermia</role>
+            </castItem>
+            <castItem type="role">
+               <role xml:id="Spadassins">Deux Spadassins</role>
+            </castItem>
+            <castItem type="role">
+               <role xml:id="Marianne">Marianne</role>
+               <roleDesc>femme de Claudio</roleDesc>
+            </castItem>
+            <castItem type="role">
+               <role xml:id="Hermia">Hermia</role>
+               <roleDesc>mère de Célio</roleDesc>
+            </castItem>
+         </castList>
+      </front>
+      <body>
+         <div type="act" n="2">
+            <head>ACTE II</head>
+            <div type="scene" n="20">
+               <head>Scène XX</head>
+               <stage rend="small-caps italic" type="mixed">Marianne, Octave, l’épée à la main,
+                  regardant de tous côtés.</stage>
+               <sp who="Marianne">
+                  <speaker rend="small-caps">Marianne</speaker>
+                  <p>– Octave, est-ce vous ?</p>
+               </sp>
+               <sp who="Octave">
+                  <speaker rend="small-caps">Octave.</speaker>
+                  <p>– C’est moi, Marianne. – Célio n’est plus !</p>
+               </sp>
+               <sp who="Marianne">
+                  <speaker rend="small-caps">Marianne.</speaker>
+                  <p>— Célio, dites-vous ? Comment se peut-il ?…</p>
+               </sp>
+               <sp who="Octave">
+                  <speaker rend="small-caps">Octave.</speaker>
+                  <p>— Il n’est plus !</p>
+               </sp>
+               <sp who="Marianne">
+                  <speaker rend="small-caps">Marianne.</speaker>
+                  <p>— O ciel !</p>
+               </sp>
+               <sp who="Octave">
+                  <speaker rend="small-caps">Octave.</speaker>
+                  <p>— Il n’est plus ! N’allez pas par là.</p>
+               </sp>
+               <sp who="Marianne">
+                  <speaker rend="small-caps">Marianne.</speaker>
+                  <p>— Où voulez-vous que j’aille ? Je suis perdue ! Il faut partir, Octave, il faut
+                     fuir ! – Claudio sûrement n’est pas dans la maison ?</p>
+               </sp>
+               <sp who="Octave">
+                  <speaker rend="small-caps">Octave.</speaker>
+                  <p>— Non ; ils ont pris leurs précautions, et m’ont laissé prudemment seul.</p>
+               </sp>
+               <sp who="Marianne">
+                  <speaker rend="small-caps">Marianne.</speaker>
+                  <p>— Je le connais, je suis perdue, et vous peut-être aussi... Partons ! ils vont
+                     revenir, et tout à l’heure.</p>
+               </sp>
+               <sp who="Octave">
+                  <speaker rend="small-caps">Octave.</speaker>
+                  <p>— Partez si vous voulez ; je reste. S’ils doivent revenir ils me trouveront,
+                     et, quoi qu’il advienne, je les attendrai. Je veux veiller près de lui dans son
+                     dernier sommeil.</p>
+               </sp>
+               <sp who="Marianne">
+                  <speaker rend="small-caps">Marianne.</speaker>
+                  <p>— Mais moi, m’abandonnerez-vous ? Savez-vous à quel danger vous vous exposez,
+                     et jusqu’où peut aller leur vengeance ?</p>
+               </sp>
+               <sp who="Octave">
+                  <speaker rend="small-caps">Octave.</speaker>
+                  <p>— Regardez là-bas, derrière ces arbres, cette petite place sombre, au coin de
+                     la muraille ; là est couché mon seul ami ; quant au reste, je ne m’en soucie
+                     guère.</p>
+               </sp>
+               <sp who="Marianne">
+                  <speaker rend="small-caps">Marianne.</speaker>
+                  <p>— Pas même de votre vie, — ni de la mienne?</p>
+               </sp>
+               <sp who="Octave">
+                  <speaker rend="small-caps">Octave</speaker>
+                  <p>— Pas même de cela. Regardez là-bas!... Moi seul au monde je l’ai connu. Posez
+                     sur sa tombe une urne d’albâtre couverte d’un long voile de deuil, ce sera sa
+                     parfaite image. C’est ainsi qu’une douce mélancolie voilait les perfections de
+                     cette âme tendre et délicate... Elle eût été heureuse la femme qui l’eût
+                     aimé.</p>
+               </sp>
+               <sp who="Marianne">
+                  <speaker rend="small-caps">Marianne.</speaker>
+                  <p>— L’aurait-il défendue si elle avait couru un danger ?</p>
+               </sp>
+               <sp who="Octave">
+                  <speaker rend="small-caps">Octave.</speaker>
+                  <p>— Oui, sans nul doute, il l’aurait fait ! — Lui seul était capable d’un
+                     dévouement sans bornes ; lui seul eût consacré sa vie entière à la femme qu’il
+                     aimait, aussi facilement qu’il a bravé la mort pour elle.</p>
+               </sp>
+               <sp who="Marianne">
+                  <speaker rend="small-caps">Marianne.</speaker>
+                  <p>— Et vous, Octave, ne le feriez-vous pas ?</p>
+               </sp>
+               <sp who="Octave">
+                  <speaker rend="small-caps">Octave.</speaker>
+                  <p>— Moi ? — moi, je ne suis qu’un débauché sans cœur; je n’estime point les
+                     femmes. L’amour que j’inspire est comme celui que je ressens, l’ivresse
+                     passagère d’un songe. Ma gaieté n’est qu’un masque ; mon cœur est plus vieux
+                     qu’elle ! Ah ! je ne suis qu’un lâche ! sa mort n’est point vengée !</p>
+               </sp>
+               <stage rend="italic" type="business">(Il jette à terre son épée.)</stage>
+               <sp who="Marianne">
+                  <speaker rend="small-caps">Marianne.</speaker>
+                  <p>— Comment aurait-elle pu l’être ?... Claudio est trop vieux pour accepter un
+                     duel, et trop puissant dans cette ville pour rien craindre de vous.</p>
+               </sp>
+               <sp who="Octave">
+                  <speaker rend="small-caps">Octave.</speaker>
+                  <p>— Célio m’aurait vengé, si j’étais mort pour lui comme il est mort pour moi.
+                     Son tombeau m’appartient ; c’est moi qu’ils ont étendu dans cette sombre allée
+                     ; c’est pour moi qu’ils avaient aiguisé leurs épées ; c’est pour moi qu’ils ont
+                     tué !... Adieu la gaieté de ma jeunesse, l’insouciante folie, la vie libre et
+                     joyeuse au pied du Vésuve ! Adieu les bruyants repas, les causeries du soir,
+                     les sérénades sous les balcons dorés ! Adieu Naples et ses femmes, les
+                     mascarades à la lueur des torches, les longs soupers à l’ombre des forêts !
+                     Adieu l’amour et l’amitié ! — Ma place est vide sur la terre.</p>
+               </sp>
+               <sp who="Marianne">
+                  <speaker rend="small-caps">Marianne.</speaker>
+                  <p>— En êtes-vous bien sûr, Octave ? Pourquoi dites-vous : adieu l’amour ?</p>
+               </sp>
+               <sp who="Octave">
+                  <speaker rend="small-caps">Octave.</speaker>
+                  <p>— Je ne vous aime pas, Marianne ; c’était Célio qui vous aimait.</p>
+               </sp>
+            </div>
+         </div>
+      </body>
+   </text>
+</TEI>

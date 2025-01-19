@@ -1,0 +1,604 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+  xml:lang="en">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Assignment Customisation</title>
+        <author>Juliette Terrien</author>
+      </titleStmt>
+      <publicationStmt>
+        <authority>Juliette Terrien</authority>
+        <availability status="free">
+          <licence target="http://creativecommons.org/licenses/by-sa/3.0/"> Distributed under a
+            Creative Commons Attribution-ShareAlike 3.0 Unported License</licence>
+        </availability>
+      </publicationStmt>
+      <sourceDesc>
+        <p>ODD based on tei_minimal created from scratch by James Cummings.</p>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <appInfo>
+        <application ident="RomaJS" version="1.1.2" when="2024-12-30T15:00:34.303Z">
+          <desc>File edited with <ref target="https://github.com/TEIC/romajs">RomaJS</ref></desc>
+        </application>
+      </appInfo>
+    </encodingDesc>
+  </teiHeader>
+
+  <text>
+    <body>
+      <head>An Assignment Customisation</head>
+      <p>This TEI ODD defines a customisation about the encoding of samples from Alfred de Musset's
+        plays.</p>
+      <p>This project aims to showcase Alfred de Musset's dramaturgical work. Given the enduring
+        presence of Musset's works in French literature studies, this project particularly targets a
+        university audience while remaining accessible to a broader public. The project focuses on
+        selected excerpts from the concluding scenes of La Nuit vénitienne (1830), Les Caprices de
+        Marianne (1833), and On ne badine pas avec l'amour (1834). These prose plays highlight
+        Musset's distinctive style, characterized by tormented characters and tragic outcomes.
+        Analyzing these pivotal scenes provides insight into his treatment of characters, dramatic
+        tension, and recurring themes, offering a deeper understanding of his artistic evolution.
+        The use of XML-TEI encoding, ensures a structured, standardized representation of dramatic
+        elements such as roles, speeches, and stage directions. This approach not only clarifies
+        character relationships and dialogue dynamics but also facilitates targeted textual
+        analysis, such as identifying speech patterns or visualizing character interactions.
+        Moreover, the XML-TEI format ensures interoperability and long-term preservation of these
+        encoded texts, safeguarding Alfred de Musset's dramatic legacy for future generations.</p>
+      <p>This file is used to indicate the TEI elements used in this project. It also indicates the
+        constraints imposed regarding elements and attributes to produce well-structured and
+        validated XML documents.</p>
+
+      <p>It includes height elements from the header module: <list rend="numbered">
+          <item><gi>teiHeader</gi> to store required metadata;</item>
+          <item><gi>fileDesc</gi> to record information about this file;</item>
+          <item><gi>titleStmt</gi> to record information about the title;</item>
+          <item><gi>publicationStmt</gi> to detail how the file is published;</item>
+          <item><gi>sourceDesc</gi> to record where it is derived from;</item>
+          <item><gi>availability</gi> to specify how the file can be reused;</item>
+          <item><gi>licence</gi> to specify how the file is protected;</item>
+          <item><gi>idno</gi> to specify the identification number of the original document.</item>
+        </list></p>
+
+      <p>It includes fifteen elements from the core module: <list rend="numbered">
+          <item><gi>p</gi>to mark paragraphs in a text;</item>
+          <item><gi>title</gi> to record a title;</item>
+          <item><gi>author</gi> to record an author;</item>
+          <item><gi>date</gi> to contain a date;</item>
+          <item><gi>bibl</gi> to record a bibliographic reference;</item>
+          <item><gi>monogr</gi> to store bibliographic data;</item>
+          <item><gi>imprint</gi> to record information relating to a bibliographic item;</item>
+          <item><gi>publisher</gi> to record the organization responsible of the publication of a
+            bibliographic item;</item>
+          <item><gi>pubPlace</gi> to record the place of publication;</item>
+          <item><gi>ref</gi> to record a reference to another location;</item>
+          <item><gi>relatedItem</gi> to record or store another bibliographic item;</item>
+          <item><gi>head</gi> to record an heading;</item>
+          <item><gi>stage</gi> to specify a stage direction;</item>
+          <item><gi>sp</gi> to specify a line from a character;</item>
+          <item><gi>speaker</gi> to specify the speaker of a line.</item>
+        </list></p>
+
+      <p>It contains the entire tei module.</p>
+
+      <p>It includes five elements from the textstructure module: <list rend="numbered">
+          <item><gi>TEI</gi> to contain a TEI document;</item>
+          <item><gi>text</gi> to contain a text;</item>
+          <item><gi>body</gi> to contain the body of a text;</item>
+          <item><gi>front</gi> to contain a preliminary text;</item>
+          <item><gi>div</gi> to contain a subdivision in a text.</item>
+        </list></p>
+
+      <p>Finally, it also includes four elements from the drama module: <list rend="numbered">
+          <item><gi>castList</gi> to store a list of characters;</item>
+          <item><gi>castItem</gi> to store informations about a role in the list of
+            characters;</item>
+          <item><gi>role</gi> to record the name of a role;</item>
+          <item><gi>roleDesc</gi> to record a description of a role.</item>
+        </list>
+      </p>
+
+      <schemaSpec ident="tei_assignment" start="TEI" prefix="tei_" targetLang="en" docLang="en">
+        <desc>A customization for the encoding project of Alfred de Musset's plays</desc>
+
+
+        <!-- required header elements -->
+        <moduleRef key="header"
+          include="teiHeader fileDesc titleStmt publicationStmt sourceDesc availability licence idno"/>
+
+        <!-- required core elements -->
+        <moduleRef key="core"
+          include="p title author date bibl monogr imprint publisher pubPlace ref relatedItem head stage sp speaker"/>
+
+        <!-- required textstructure elements -->
+        <moduleRef key="textstructure" include="TEI text body front div"/>
+
+        <!-- required module tei -->
+        <moduleRef key="tei"/>
+
+        <!-- required drama elements -->
+        <moduleRef key="drama" include="castList castItem role roleDesc"/>
+
+
+        <elementSpec ident="title" mode="change">
+          <desc>In this document, the element <gi>title</gi> implies a textual content.</desc>
+          <classes>
+            <memberOf key="model.emphLike"/>
+            <memberOf key="model.msQuoteLike"/>
+          </classes>
+          <content>
+            <textNode/>
+          </content>
+        </elementSpec>
+
+        <elementSpec ident="publicationStmt" mode="change" module="header">
+          <desc>In this project <gi>publicationStmt</gi> contains a sequence of two elements:
+              <gi>date</gi> and <gi>availability</gi> as children.</desc>
+          <content>
+            <sequence>
+              <elementRef key="date"/>
+              <elementRef key="availability"/>
+            </sequence>
+          </content>
+        </elementSpec>
+
+        <elementSpec ident="date" mode="change" module="core">
+          <desc>In this project <gi>date</gi> is associated to three different attributes. The
+            attribute <att>when</att> can be used to indicate a specific date. The attributes
+              <att>from</att> and <att>to</att> indicate a time interval.</desc>
+          <classes>
+            <memberOf key="model.dateLike"/>
+            <memberOf key="model.publicationStmtPart.detail"/>
+          </classes>
+          <attList>
+            <attDef ident="when" mode="replace">
+              <desc/>
+              <datatype>
+                <dataRef key="teidata.temporal.w3c"/>
+              </datatype>
+            </attDef>
+            <attDef ident="from" mode="replace">
+              <desc/>
+              <datatype>
+                <dataRef key="teidata.temporal.w3c"/>
+              </datatype>
+            </attDef>
+            <attDef ident="to" mode="replace">
+              <desc/>
+              <datatype>
+                <dataRef key="teidata.temporal.w3c"/>
+              </datatype>
+            </attDef>
+          </attList>
+        </elementSpec>
+
+        <elementSpec ident="licence" mode="replace" module="header">
+          <desc>In this project <gi>licence</gi>contains two attributes: <att>type</att> and
+              <att>target</att>.</desc>
+          <desc>The value of <att>type</att> is <val>url</val> and the value of <att>target</att>
+            must correspond to a url address.</desc>
+          <classes>
+            <memberOf key="model.availabilityPart"/>
+          </classes>
+          <content>
+            <textNode/>
+          </content>
+          <attList>
+            <attDef ident="type" mode="replace">
+              <datatype>
+                <dataRef key="teidata.enumerated"/>
+              </datatype>
+              <valList>
+                <valItem ident="url"/>
+              </valList>
+            </attDef>
+            <attDef ident="target" mode="replace">
+              <datatype>
+                <dataRef key="teidata.pointer"/>
+              </datatype>
+            </attDef>
+          </attList>
+        </elementSpec>
+
+        <elementSpec ident="bibl" mode="change" module="core">
+          <desc>In this project <gi>bibl</gi> contains a sequence of two elements: <gi>monogr</gi>
+            and <gi>relatedItem</gi> as children.</desc>
+          <classes>
+            <memberOf key="model.biblLike"/>
+            <memberOf key="model.biblPart"/>
+          </classes>
+          <content>
+            <sequence>
+              <elementRef key="monogr"/>
+              <elementRef key="relatedItem"/>
+            </sequence>
+          </content>
+        </elementSpec>
+
+        <elementSpec ident="monogr" mode="change" module="core">
+          <desc>In this project <gi>monogr</gi> contains a sequence of three elements:
+              <gi>author</gi>, <gi>title</gi> and <gi>imprint</gi> as children.</desc>
+          <content>
+            <sequence>
+              <elementRef key="author"/>
+              <elementRef key="title"/>
+              <elementRef key="imprint"/>
+            </sequence>
+          </content>
+        </elementSpec>
+
+        <elementSpec ident="imprint" mode="change" module="core">
+          <desc>In this project <gi>monogr</gi> contains a sequence of three elements:
+              <gi>publisher</gi>, <gi>pubPlace</gi> and <gi>date</gi> as children.</desc>
+          <content>
+            <sequence>
+              <elementRef key="publisher"/>
+              <elementRef key="pubPlace"/>
+              <elementRef key="date"/>
+            </sequence>
+          </content>
+        </elementSpec>
+
+        <elementSpec ident="pubPlace" mode="change" module="core">
+          <desc>In this project, the element <gi>pubPlace</gi> implies a textual content.</desc>
+          <classes>
+            <memberOf key="model.imprintPart"/>
+            <memberOf key="model.publicationStmtPart.detail"/>
+          </classes>
+          <content>
+            <textNode/>
+          </content>
+        </elementSpec>
+
+        <elementSpec ident="relatedItem" mode="change" module="core">
+          <desc>In this project <gi>relatedItem</gi> contains a sequence of six elements:
+            <gi>p</gi>, <gi>date</gi>, <gi>publisher</gi>, <gi>idno</gi>, <gi>ref</gi> and
+              <gi>availability</gi> as children.</desc>
+          <classes>
+            <memberOf key="model.biblPart"/>
+          </classes>
+          <content>
+            <sequence>
+              <elementRef key="p"/>
+              <elementRef key="date"/>
+              <elementRef key="publisher"/>
+              <elementRef key="idno"/>
+              <elementRef key="ref"/>
+              <elementRef key="availability"/>
+            </sequence>
+          </content>
+        </elementSpec>
+
+        <elementSpec ident="idno" mode="change" module="header">
+          <desc>In this document, the element <gi>idno</gi> implies a textual content.</desc>
+          <classes>
+            <memberOf key="model.msItemPart"/>
+            <memberOf key="model.nameLike"/>
+            <memberOf key="model.personPart"/>
+            <memberOf key="model.publicationStmtPart.detail"/>
+          </classes>
+          <content>
+            <textNode/>
+          </content>
+        </elementSpec>
+
+        <elementSpec ident="ref" mode="replace" module="core">
+          <desc>In this document, the element <gi>ref</gi> implies a textual content.</desc>
+          <desc>It contains two attributes: <att>type</att> and <att>target</att>. The value of
+              <att>type</att> is <val>url</val> and the value of <att>target</att> must correspond
+            to a url address.</desc>
+          <classes>
+            <memberOf key="model.annotationPart.body"/>
+            <memberOf key="model.ptrLike"/>
+          </classes>
+          <content>
+            <textNode/>
+          </content>
+          <attList>
+            <attDef ident="type" mode="replace">
+              <datatype>
+                <dataRef key="teidata.enumerated"/>
+              </datatype>
+              <valList>
+                <valItem ident="url"/>
+              </valList>
+            </attDef>
+            <attDef ident="target" mode="replace">
+              <datatype>
+                <dataRef key="teidata.pointer"/>
+              </datatype>
+            </attDef>
+          </attList>
+        </elementSpec>
+
+        <elementSpec ident="front" mode="change" module="textstructure">
+          <desc>In this project <gi>front</gi> contains a sequence of two elements: <gi>head</gi>
+            and <gi>castList</gi> as children.</desc>
+          <content>
+            <sequence>
+              <elementRef key="head"/>
+              <elementRef key="castList"/>
+            </sequence>
+          </content>
+        </elementSpec>
+
+        <elementSpec ident="castItem" mode="change" module="drama">
+          <desc>In this project <gi>castItem</gi> is required with an attribute <att>type</att>
+            which has for value <val>role</val>.</desc>
+          <desc>This element permit to represent a character of a Musset's play.</desc>
+          <constraintSpec ident="castItem" mode="change" scheme="isoschematron">
+            <constraint>
+              <sch:rule context="tei:castItem">
+                <sch:assert test="@type" role="error">The type attribute is required for
+                  castItem</sch:assert>                
+              </sch:rule>
+            </constraint>
+          </constraintSpec>
+          <constraintSpec ident="type" mode="change" scheme="isoschematron">
+            <constraint>
+              <sch:rule context="tei:castItem[@type]">
+                <sch:assert test="@type = 'role'" role="error">The type attribute must have a role
+                  value</sch:assert>
+              </sch:rule>
+            </constraint>
+          </constraintSpec>
+        </elementSpec>
+
+        <elementSpec ident="role" mode="replace" module="drama">
+          <desc>In this project <gi>role</gi> have an attribute <att>xml:id</att> which is used to
+            assign a unique identifier to a character.</desc>
+          <classes>
+            <memberOf key="model.castItemPart"/>
+          </classes>
+          <content>
+            <textNode/>
+          </content>
+          <attList>
+            <attDef ident="xml:id" mode="replace">
+              <datatype>
+                <dataRef key="ID"/>
+              </datatype>
+            </attDef>
+          </attList>
+        </elementSpec>
+
+        <elementSpec ident="div" mode="replace" module="textstructure">
+          <desc>In this project <gi>div</gi> contains a sequence of elements that can be repeat in
+            any order and can be optionnal: <gi>head</gi>, <gi>div</gi>, <gi>stage</gi> and
+              <gi>sp</gi> as children.</desc>
+          <desc>The attribute <att>type</att> indicates here the division of the play. It can have
+            one value among them: <val>act</val> and <val>scene</val>.</desc>
+          <desc>The attribute <att>n</att> indicates here the act or scene numbering.</desc>
+          <classes>
+            <memberOf key="model.divLike"/>
+          </classes>
+          <content>
+            <sequence preserveOrder="false">
+              <elementRef key="div" minOccurs="0" maxOccurs="1"/>
+              <elementRef key="head" minOccurs="0" maxOccurs="unbounded"/>
+              <elementRef key="stage" minOccurs="0" maxOccurs="unbounded"/>
+              <elementRef key="sp" minOccurs="0" maxOccurs="unbounded"/>
+            </sequence>
+          </content>
+          <attList>
+            <attDef ident="type" mode="replace">
+              <datatype>
+                <dataRef key="teidata.enumerated"/>
+              </datatype>
+              <valList type="closed">
+                <valItem ident="act"/>
+                <valItem ident="scene"/>
+              </valList>
+            </attDef>
+            <attDef ident="n" mode="replace">
+              <datatype>
+                <dataRef key="teidata.text"/>
+              </datatype>
+            </attDef>
+          </attList>
+        </elementSpec>
+
+        <elementSpec ident="stage" mode="replace" module="core">
+          <desc>In this project the element <gi>stage</gi> contains one recommanded attribute
+              <att>rend</att> and one required attribute <att>type</att>.</desc>
+          <desc>The attribute <att>rend</att> indicates here how the text associated to the element
+            was presented. It can have one or more values: <val>italic</val>, <val>uppercase</val>,
+              <val>small-caps</val> and <val>center</val>.</desc>
+          <desc>The attribute <att>type</att> indicates here how the didascalia associated with the
+            element <gi>stage</gi> is characterized. It can have only one value:
+            <val>business</val>, <val>setting</val>, <val>mixed</val>, <val>location</val>,
+              <val>entrance</val> and <val>exit</val>.</desc>
+          <classes>
+            <memberOf key="model.stageLike"/>
+          </classes>
+          <content>
+            <textNode/>
+          </content>
+          <attList>
+            <attDef ident="rend" mode="replace" usage="rec">
+              <datatype maxOccurs="unbounded">
+                <dataRef key="teidata.word"/>
+              </datatype>
+              <valList type="closed">
+                <valItem ident="italic"/>
+                <valItem ident="uppercase"/>
+                <valItem ident="small-caps"/>
+                <valItem ident="center"/>
+              </valList>
+            </attDef>
+            <attDef ident="type" mode="replace" usage="req">
+              <datatype>
+                <dataRef key="teidata.enumerated"/>
+              </datatype>
+              <valList type="closed">
+                <valItem ident="business"/>
+                <valItem ident="setting"/>
+                <valItem ident="mixed"/>
+                <valItem ident="location"/>
+                <valItem ident="entrance"/>
+                <valItem ident="exit"/>
+              </valList>
+            </attDef>
+          </attList>
+        </elementSpec>
+
+        <elementSpec ident="sp" mode="replace" module="core">
+          <desc>In this project <gi>sp</gi> contains a sequence of two elements and one optionnal
+            element: <gi>speaker</gi>, <gi>p</gi> and <gi>stage</gi>> as children.</desc>
+          <desc><gi>sp</gi> has the <att>who</att> attribute which links the identifier of a
+            character defined with the <att>xml:id</att> of the <gi>role</gi> element, to a line of
+            the text.</desc>
+          <classes>
+            <memberOf key="model.divPart"/>
+          </classes>
+          <content>
+            <sequence preserveOrder="false">
+              <elementRef key="speaker" minOccurs="1" maxOccurs="unbounded"/>
+              <elementRef key="p" minOccurs="1" maxOccurs="unbounded"/>
+              <elementRef key="stage" minOccurs="0"/>
+            </sequence>
+          </content>
+          <attList>
+            <attDef ident="who" mode="replace">
+              <datatype>
+                <dataRef key="teidata.pointer"/>
+              </datatype>
+            </attDef>
+          </attList>
+        </elementSpec>
+
+        <elementSpec ident="speaker" mode="change" module="core">
+          <desc>In this project the element <gi>speaker</gi> contains the attribute <att>rend</att>
+            which can have one or more values: <val>italic</val>, <val>uppercase</val>,
+              <val>small-caps</val> and <val>center</val>.</desc>
+          <desc>The attribute <att>rend</att> indicates here how the text associated to the element
+            was presented.</desc>
+          <attList>
+            <attDef ident="rend" mode="change">
+              <datatype maxOccurs="unbounded">
+                <dataRef key="teidata.word"/>
+              </datatype>
+              <valList type="closed">
+                <valItem ident="italic"/>
+                <valItem ident="uppercase"/>
+                <valItem ident="small-caps"/>
+                <valItem ident="center"/>
+              </valList>
+            </attDef>
+          </attList>
+        </elementSpec>
+
+
+        <!-- Attribute Classes and Model Classes required for the project -->
+        <classRef key="att.global"/>
+        <classRef key="att.global.rendition"/>
+        <classRef key="att.typed"/>
+        <classRef key="att.datable.w3c"/>
+        <classRef key="att.naming"/>
+        <classRef key="att.ascribed"/>
+        <classRef key="att.pointing"/>
+        <classRef key="model.biblLike"/>
+        <classRef key="model.biblPart"/>
+        <classRef key="model.describedResource"/>
+        <classRef key="model.emphLike"/>
+        <classRef key="model.msQuoteLike"/>
+        <classRef key="model.respLike"/>
+        <classRef key="model.pLike"/>
+        <classRef key="model.dateLike"/>
+        <classRef key="model.publicationStmtPart.detail"/>
+        <classRef key="model.availabilityPart"/>
+        <classRef key="model.imprintPart"/>
+        <classRef key="model.publicationStmtPart.agency"/>
+        <classRef key="model.msItemPart"/>
+        <classRef key="model.nameLike"/>
+        <classRef key="model.personPart"/>
+        <classRef key="model.annotationPart.body"/>
+        <classRef key="model.ptrLike"/>
+        <classRef key="model.resource"/>
+        <classRef key="model.headLike"/>
+        <classRef key="model.pLike.front"/>
+        <classRef key="model.frontPart.drama"/>
+        <classRef key="model.standOffPart"/>
+        <classRef key="model.inter"/>
+        <classRef key="model.castItemPart"/>
+        <classRef key="model.divLike"/>
+        <classRef key="model.stageLike"/>
+        <classRef key="model.divPart"/>
+
+        <!-- Attribute Classes, Model Classes and Datatypes not required for the project-->
+        <classSpec ident="att.canonical" type="atts" mode="delete"/>
+        <classSpec ident="att.cmc" type="atts" mode="delete"/>
+        <classSpec ident="att.datable" type="atts" mode="delete"/>
+        <classSpec ident="att.declarable" type="atts" mode="delete"/>
+        <classSpec ident="att.declaring" type="atts" mode="delete"/>
+        <classSpec ident="att.fragmentable" type="atts" mode="delete"/>
+        <classSpec ident="att.global.responsibility" type="atts" mode="delete"/>
+        <classSpec ident="att.global.source" type="atts" mode="delete"/>
+        <classSpec ident="att.written" type="atts" mode="delete"/>
+        <classSpec ident="model.addressLike" type="model" mode="delete"/>
+        <classSpec ident="model.attributable" type="model" mode="delete"/>
+        <classSpec ident="model.cmc" type="model" mode="delete"/>
+        <classSpec ident="model.common" type="model" mode="delete"/>
+        <classSpec ident="model.div1Like" type="model" mode="delete"/>
+        <classSpec ident="model.divBottom" type="model" mode="delete"/>
+        <classSpec ident="model.divBottomPart" type="model" mode="delete"/>
+        <classSpec ident="model.divGenLike" type="model" mode="delete"/>
+        <classSpec ident="model.divTop" type="model" mode="delete"/>
+        <classSpec ident="model.divTopPart" type="model" mode="delete"/>
+        <classSpec ident="model.divWrapper" type="model" mode="delete"/>
+        <classSpec ident="model.egLike" type="model" mode="delete"/>
+        <classSpec ident="model.frontPart" type="model" mode="delete"/>
+        <classSpec ident="model.gLike" type="model" mode="delete"/>
+        <classSpec ident="model.global" type="model" mode="delete"/>
+        <classSpec ident="model.global.edit" type="model" mode="delete"/>
+        <classSpec ident="model.global.meta" type="model" mode="delete"/>
+        <classSpec ident="model.graphicLike" type="model" mode="delete"/>
+        <classSpec ident="model.hiLike" type="model" mode="delete"/>
+        <classSpec ident="model.highlighted" type="model" mode="delete"/>
+        <classSpec ident="model.lLike" type="model" mode="delete"/>
+        <classSpec ident="model.lPart" type="model" mode="delete"/>
+        <classSpec ident="model.labelLike" type="model" mode="delete"/>
+        <classSpec ident="model.limitedPhrase" type="model" mode="delete"/>
+        <classSpec ident="model.listLike" type="model" mode="delete"/>
+        <classSpec ident="model.measureLike" type="model" mode="delete"/>
+        <classSpec ident="model.milestoneLike" type="model" mode="delete"/>
+        <classSpec ident="model.nameLike.agent" type="model" mode="delete"/>
+        <classSpec ident="model.noteLike" type="model" mode="delete"/>
+        <classSpec ident="model.oddDecl" type="model" mode="delete"/>
+        <classSpec ident="model.offsetLike" type="model" mode="delete"/>
+        <classSpec ident="model.pPart.data" type="model" mode="delete"/>
+        <classSpec ident="model.pPart.edit" type="model" mode="delete"/>
+        <classSpec ident="model.pPart.editorial" type="model" mode="delete"/>
+        <classSpec ident="model.pPart.msdesc" type="model" mode="delete"/>
+        <classSpec ident="model.pPart.transcriptional" type="model" mode="delete"/>
+        <classSpec ident="model.paraPart" type="model" mode="delete"/>
+        <classSpec ident="model.phrase" type="model" mode="delete"/>
+        <classSpec ident="model.phrase.xml" type="model" mode="delete"/>
+        <classSpec ident="model.placeNamePart" type="model" mode="delete"/>
+        <classSpec ident="model.placeStateLike" type="model" mode="delete"/>
+        <classSpec ident="model.quoteLike" type="model" mode="delete"/>
+        <classSpec ident="model.segLike" type="model" mode="delete"/>
+        <classSpec ident="model.sourceDescPart" type="model" mode="delete"/>
+        <classSpec ident="model.specDescLike" type="model" mode="delete"/>
+        <classSpec ident="model.teiHeaderPart" type="model" mode="delete"/>
+        <dataSpec ident="teidata.certainty" mode="delete"/>
+        <dataSpec ident="teidata.count" mode="delete"/>
+        <dataSpec ident="teidata.duration.iso" mode="delete"/>
+        <dataSpec ident="teidata.duration.w3c" mode="delete"/>
+        <dataSpec ident="teidata.name" mode="delete"/>
+        <dataSpec ident="teidata.numeric" mode="delete"/>
+        <dataSpec ident="teidata.outputMeasurement" mode="delete"/>
+        <dataSpec ident="teidata.pattern" mode="delete"/>
+        <dataSpec ident="teidata.probCert" mode="delete"/>
+        <dataSpec ident="teidata.probability" mode="delete"/>
+        <dataSpec ident="teidata.replacement" mode="delete"/>
+        <dataSpec ident="teidata.truthValue" mode="delete"/>
+        <dataSpec ident="teidata.version" mode="delete"/>
+        <dataSpec ident="teidata.versionNumber" mode="delete"/>
+        <dataSpec ident="teidata.xTruthValue" mode="delete"/>
+        <dataSpec ident="teidata.xpath" mode="delete"/>
+      </schemaSpec>
+    </body>
+  </text>
+</TEI>

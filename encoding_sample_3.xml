@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?xml-model href="tei_assignment.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="tei_assignment.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Encoding of the sample 3</title>
+            <author>Juliette Terrien</author>
+         </titleStmt>
+         <publicationStmt>
+            <date when="2024-12-29">29 december 2024</date>
+            <availability>
+               <licence type="url" target="http://creativecommons.org/licenses/by-sa/3.0/">
+                  Distributed under a Creative Commons Attribution-ShareAlike 3.0 Unported
+                  License</licence>
+            </availability>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl>
+               <monogr>
+                  <author>Musset, Alfred de</author>
+                  <title>On ne badine pas avec l'amour : comédie en trois actes / Alfred de Musset ;
+                     édition suivie de notes et de variantes, ornée de compositions décoratives par
+                     Georges Barbier</title>
+                  <imprint>
+                     <publisher>G. Crès et cie</publisher>
+                     <pubPlace>Paris</pubPlace>
+                     <date when="1920">1920</date>
+                  </imprint>
+               </monogr>
+               <relatedItem>
+                  <p>This encoding project is based on the digitization of the original document</p>
+                  <date when="2013-08-01">01/08/2013</date>
+                  <publisher>Bibliothèque nationale de France</publisher>
+                  <idno>Bibliothèque nationale de France, département Littérature et art,
+                     8-YTH-36233</idno>
+                  <ref type="url" target="https://gallica.bnf.fr/ark:/12148/bpt6k6527918x">Accès au
+                     document numérisé sur Gallica></ref>
+                  <availability>
+                     <licence type="url"
+                        target="https://gallica.bnf.fr/edit/und/conditions-dutilisation-des-contenus-de-gallica"
+                        >public domain</licence>
+                  </availability>
+               </relatedItem>
+            </bibl>
+         </sourceDesc>
+      </fileDesc>
+   </teiHeader>
+   <text xml:lang="fr">
+      <front>
+         <head>Personnages</head>
+         <castList>
+            <castItem type="role">
+               <role xml:id="Baron">Le Baron</role>
+            </castItem>
+            <castItem type="role">
+               <role xml:id="Perdican">Perdican</role>
+               <roleDesc>Son fils.</roleDesc>
+            </castItem>
+            <castItem type="role">
+               <role xml:id="Blazius">Maître Blazius</role>
+               <roleDesc>Gouverneur de Perdican.</roleDesc>
+            </castItem>
+            <castItem type="role">
+               <role xml:id="Bridaine">Maître Bridaine</role>
+               <roleDesc>Curé.</roleDesc>
+            </castItem>
+            <castItem type="role">
+               <role xml:id="Camille">Camille</role>
+               <roleDesc>Nièce du Baron.</roleDesc>
+            </castItem>
+            <castItem type="role">
+               <role xml:id="Pluche">Dame Pluche</role>
+               <roleDesc>Gouvernante de Camille.</roleDesc>
+            </castItem>
+            <castItem type="role">
+               <role xml:id="Rosette">Rosette</role>
+               <roleDesc>Soeur de lait de Camille.</roleDesc>
+            </castItem>
+            <castItem type="role">
+               <role xml:id="Paysans">Paysans, valets etc.</role>
+            </castItem>
+         </castList>
+      </front>
+      <body>
+         <div type="act" n="3">
+            <head>ACTE TROISIEME</head>
+            <div type="scene" n="8">
+               <head>Scène VIII</head>
+               <stage rend="uppercase center" type="location">UN ORATOIRE</stage>
+               <stage rend="italic center" type="entrance">Entre</stage>
+               <sp who="Camille">
+                  <speaker rend="uppercase center">Camille</speaker>
+                  <stage rend="italic center" type="business">Elle se jette au pied de
+                     l'autel</stage>
+                  <p>M’AVEZ-VOUS abandonnée, ô mon Dieu ? Vous le savez, lorsque je suis venue,
+                     j’avais juré de vous être fidèle ; quand j’ai refusé de devenir l’épouse d’un
+                     autre que vous, j’ai cru parler sincèrement devant vous et ma conscience ; vous
+                     le savez, mon père ; ne voulez-vous donc plus de moi ? Oh ! pourquoi
+                     faites-vous mentir la vérité elle-même ? Pourquoi suis-je si faible ? Ah !
+                     malheureuse, je ne puis plus prier.</p>
+               </sp>
+               <stage rend="italic center" type="entrance">Entre Perdican</stage>
+               <sp who="Perdican">
+                  <speaker rend="uppercase center">Perdican</speaker>
+                  <p>Orgueil ! le plus fatal des conseillers humains, qu’es-tu faire entre cette
+                     fille et mi ? La voilà pâle et effrayée, qui presse sur les dalles insensibles
+                     son coeur et son visage. Elle aurait pu m’aimer, et nous étions nés l’un pour
+                     l’autre ; qu’es-tu venu faire sur nos lèvres, orgueil, lorsque nos mains
+                     allaient se joindre ?</p>
+               </sp>
+               <sp who="Camille">
+                  <speaker rend="uppercase center">Camille</speaker>
+                  <p>Qui m’a suivie ? Qui parle sous cette voûte ? Est-ce toi, Perdican ?</p>
+               </sp>
+               <sp who="Perdican">
+                  <speaker rend="uppercase center">Perdican</speaker>
+                  <p>Insensés que nous sommes ! nous nous aimons. Quel songe avons-nous fait,
+                     Camille ? Quelles vaines paroles, quelles misérables folies ont passé comme un
+                     vent funeste entre nous deux ! Lequel de nous a voulu tromper l’autre ? Hélas !
+                     cette vie est elle-même un si pénible rêve ! pourquoi encore y mêler les
+                     nôtres ? O mon Dieu ! le bonheur est une perle si rare dans cet océan
+                     d’ici-bas ! Tu nous l’avais donné, pêcheur céleste, tu l’avais tiré pour nous
+                     des profondeurs de l’abîme, cet inestimable joyau ; et nous, comme des enfants
+                     gâtés que nous sommes, nous en avons fait un jouet. Le vert sentier qui nous
+                     amenait l’un vers l’autre avait une pente si douce, il était entouré de
+                     buissons si fleuris, il se perdait dans un si tranquille horizon ! il a bien
+                     fallu que la vanité, le bavardage et la colère vinssent jeter leurs rochers
+                     informes sur cette route céleste, qui nous aurait conduits à toi dans un
+                     baiser ! Il a bien fallu que nous nous fassions du mal, car nous sommes des
+                     hommes ! O insensés ! Nous nous aimons.</p>
+               </sp>
+               <stage rend="italic center" type="business">Il la prend dans ses bras</stage>
+               <sp who="Camille">
+                  <speaker rend="uppercase center">CAMILLE</speaker>
+                  <p>Oui, nous nous aimons, Perdican ; laisse-moi le sentir sur ton cœur. Ce Dieu
+                     qui nous regarde ne s’en offensera pas ; il veut bien que je t’aime ; il y a
+                     quinze ans qu’il le sait.</p>
+               </sp>
+               <sp who="Perdican">
+                  <speaker rend="uppercase center">PERDICAN</speaker>
+                  <p>Chère créature, tu es à moi !</p>
+               </sp>
+               <stage rend="italic center" type="business">Il l’embrasse ; on entend un grand cri
+                  derrière l’autel.</stage>
+               <sp who="Camille">
+                  <speaker rend="uppercase center">CAMILLE</speaker>
+                  <p>C’est la voix de ma sœur de lait.</p>
+               </sp>
+               <sp who="Perdican">
+                  <speaker rend="uppercase center">PERDICAN</speaker>
+                  <p>Comment est-elle ici ? Je l’avais laissée dans l’escalier, lorsque tu m’as fait
+                     rappeler. Il faut donc qu’elle m’ait suivi sans que je m’en sois aperçu.</p>
+               </sp>
+               <sp who="Camille">
+                  <speaker rend="uppercase center">CAMILLE</speaker>
+                  <p>Entrons dans cette galerie ; c’est là qu’on a crié.</p>
+               </sp>
+               <sp who="Perdican">
+                  <speaker rend="uppercase center">PERDICAN</speaker>
+                  <p>Je ne sais pas ce que j’éprouve ; il me semble que mes mains sont couverts de
+                     sang.</p>
+               </sp>
+               <sp who="Camille">
+                  <speaker rend="uppercase center">CAMILLE</speaker>
+                  <p>La pauvre enfant nous a sans doute épiés ; elle s’est encore évanouie ; viens,
+                     portons-lui secours ; hélas ! Tout cela est cruel.</p>
+               </sp>
+               <sp who="Perdican">
+                  <speaker rend="uppercase center">PERDICAN</speaker>
+                  <p>Non, en vérité, je n’entrerai pas ; je sens un froid mortel qui me paralyse.
+                     Vas-y, Camille, et tâche de la ramener.</p>
+                  <stage rend="italic center" type="exit">Camille sort.</stage>
+                  <p>Je vous en supplie, mon Dieu ! ne faites pas de moi un meurtrier ! Vous voyez
+                     ce qui se passe ; nous sommes deux enfants insensés, et nous avons joué avec la
+                     vie et la mort ; mais notre cœur est pur ; ne tuez pas Rosette, Dieu juste ! Je
+                     lui trouverai un mari, je réparerai ma faute ; elle est jeune, elle sera
+                     heureuse ; ne faites pas cela, ô Dieu ! vous pouvez bénir encore quatre de vos
+                     enfants. Eh bien ! Camille, qu’y a-t-il ?</p>
+               </sp>
+               <stage rend="italic center" type="entrance">Camille rentre.</stage>
+               <sp who="Camille">
+                  <speaker rend="uppercase center">CAMILLE</speaker>
+                  <p>Elle est morte. Adieu, Perdican !</p>
+               </sp>
+            </div>
+         </div>
+      </body>
+   </text>
+</TEI>
